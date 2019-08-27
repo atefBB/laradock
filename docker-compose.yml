@@ -790,6 +790,10 @@ services:
         - /dev/shm:/dev/shm
       networks:
         - frontend
+      depends_on:
+        - nginx
+      links:
+        - nginx:crawler.test
 
 ### Varnish ##########################################
     proxy:
